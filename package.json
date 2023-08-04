@@ -22,7 +22,7 @@
 		"@eslint/eslintrc": "^2.1.1",
 		"@eslint/js": "^8.46.0",
 		"@typescript-eslint/eslint-plugin": "5.50.0",
-		"@typescript-eslint/parser": "5.50.0",
+		"@typescript-eslint/parser": "5.62.0",
 		"eslint-config-prettier": "^8.10.0",
 		"globals": "^13.20.0",
 		"eslint-plugin-astro": "0.23.0",

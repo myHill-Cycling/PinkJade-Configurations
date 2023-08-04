@@ -6,7 +6,8 @@
 	"type": "module",
 	"exports": {
 		"./eslint": "./eslint.config.js",
-		"./prettier": "./prettier.config.js"
+		"./prettier": "./prettier.config.js",
+		"./lint-staged": "./lint-staged.config.js"
 	},
 	"engines": {
 		"node": "^18",
@@ -14,6 +15,9 @@
 	},
 	"engineStrict": true,
 	"packageManager": "pnpm@8.6.11",
+	"scripts": {
+		"prepare": "husky install"
+	},
 	"devDependencies": {
 		"eslint": "8.46.0",
 		"prettier": "3.0.1"
@@ -28,6 +32,8 @@
 		"eslint-plugin-jsx-a11y": "6.7.1",
 		"globals": "^13.20.0",
 		"prettier-plugin-astro": "0.11.0",
-		"prettier-plugin-tailwindcss": "0.4.1"
+		"prettier-plugin-tailwindcss": "0.4.1",
+		"husky": "8.0.3",
+		"lint-staged": "13.2.3"
 	}
 }

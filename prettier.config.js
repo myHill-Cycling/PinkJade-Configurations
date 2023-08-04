@@ -1,22 +1,22 @@
 /** @type {import("prettier").Options} */
 const base = {
 	useTabs: true,
-	tabWidth: 4,
 	semi: true,
 	singleQuote: false,
 	jsxSingleQuote: false,
 	trailingComma: "none",
 	bracketSpacing: true,
-	jsxBracketSameLine: true,
+	bracketSameLine: true,
 	arrowParens: "avoid",
 	endOfLine: "auto",
-	pluginSearchDirs: false
-}
+	quoteProps: "consistent",
+	singleAttributePerLine: true
+};
 
 export default base;
 
 /** @type {import("prettier").Options} */
 export const astro = {
 	...base,
-	plugins: ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
-}
+	plugins: ["prettier-plugin-astro", "prettier-plugin-tailwindcss"]
+};

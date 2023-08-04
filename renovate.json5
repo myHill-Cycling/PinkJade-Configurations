@@ -1,34 +1,36 @@
 {
-  $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  extends: [
-    "config:recommended",
-    "config:best-practices",
-    ":label(dependency)",
-    ":enableVulnerabilityAlertsWithLabel(priority:high)",
-  ],
-  major: {
-    dependencyDashboardApproval: true,
-  },
-  platformCommit: true,
-  platformAutomerge: true,
-  automergeType: "branch",
-  lockFileMaintenance: {
-    enabled: true,
-    automerge: true,
-  },
-  packageRules: [
-    {
-      matchUpdateTypes: ["minor", "patch"],
-      matchCurrentVersion: "!/^0/",
-      automerge: true,
-    },
-    {
-      matchPackagePatterns: ["*"],
-      semanticCommitType: "chore",
-    },
-    {
-      matchDepTypes: ["dependencies", "require"],
-      semanticCommitType: "build",
-    },
-  ],
+	// prettier doesn't understand that the schema reference needs to be quoted
+	// prettier-ignore
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	extends: [
+		"config:recommended",
+		"config:best-practices",
+		":label(dependency)",
+		":enableVulnerabilityAlertsWithLabel(priority:high)"
+	],
+	major: {
+		dependencyDashboardApproval: true
+	},
+	platformCommit: true,
+	platformAutomerge: true,
+	automergeType: "branch",
+	lockFileMaintenance: {
+		enabled: true,
+		automerge: true
+	},
+	packageRules: [
+		{
+			matchUpdateTypes: ["minor", "patch"],
+			matchCurrentVersion: "!/^0/",
+			automerge: true
+		},
+		{
+			matchPackagePatterns: ["*"],
+			semanticCommitType: "chore"
+		},
+		{
+			matchDepTypes: ["dependencies", "require"],
+			semanticCommitType: "build"
+		}
+	]
 }

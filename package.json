@@ -15,19 +15,19 @@
 	"engineStrict": true,
 	"packageManager": "pnpm@8.6.11",
 	"devDependencies": {
-		"eslint": "8.33.0",
-		"prettier": "2.8.3"
+		"eslint": "8.46.0",
+		"prettier": "3.0.1"
 	},
 	"dependencies": {
 		"@eslint/eslintrc": "^2.1.1",
 		"@eslint/js": "^8.46.0",
-		"@typescript-eslint/eslint-plugin": "5.50.0",
-		"@typescript-eslint/parser": "5.50.0",
+		"@typescript-eslint/eslint-plugin": "6.2.1",
+		"@typescript-eslint/parser": "6.2.1",
 		"eslint-config-prettier": "^8.10.0",
-		"globals": "^13.20.0",
-		"eslint-plugin-astro": "0.23.0",
+		"eslint-plugin-astro": "0.28.0",
 		"eslint-plugin-jsx-a11y": "6.7.1",
-		"prettier-plugin-astro": "0.8.0",
-		"prettier-plugin-tailwindcss": "0.2.2"
+		"globals": "^13.20.0",
+		"prettier-plugin-astro": "0.11.0",
+		"prettier-plugin-tailwindcss": "0.4.1"
 	}
 }

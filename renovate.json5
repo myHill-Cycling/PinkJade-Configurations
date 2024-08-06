@@ -1,36 +1,34 @@
 {
-	// prettier doesn't understand that the schema reference needs to be quoted
-	// prettier-ignore
-	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	$schema: "https://docs.renovatebot.com/renovate-schema.json",
 	extends: [
 		"config:recommended",
 		"config:best-practices",
 		":label(dependency)",
-		":enableVulnerabilityAlertsWithLabel(priority:high)"
+		":enableVulnerabilityAlertsWithLabel(priority:high)",
 	],
 	major: {
-		dependencyDashboardApproval: true
+		dependencyDashboardApproval: true,
 	},
-	platformCommit: true,
+	platformCommit: "enabled",
 	platformAutomerge: true,
 	automergeType: "branch",
 	lockFileMaintenance: {
 		enabled: true,
-		automerge: true
+		automerge: true,
 	},
 	packageRules: [
 		{
 			matchUpdateTypes: ["minor", "patch"],
 			matchCurrentVersion: "!/^0/",
-			automerge: true
+			automerge: true,
 		},
 		{
-			matchPackagePatterns: ["*"],
-			semanticCommitType: "chore"
+			semanticCommitType: "chore",
+			matchPackageNames: ["*"],
 		},
 		{
 			matchDepTypes: ["dependencies", "require"],
-			semanticCommitType: "build"
-		}
-	]
+			semanticCommitType: "build",
+		},
+	],
 }
